@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 210 60% 12%;
+  --border: 210 30% 90%;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: hsl(var(--foreground));
+  background: hsl(var(--background));
+}
+
+.section {
+  @apply py-16 md:py-24;
+}
+
+.container-x {
+  @apply mx-auto max-w-7xl px-6 lg:px-8;
+}
+
+.eyebrow {
+  @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-sky-500;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full bg-navy-900 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-navy-800 hover:shadow-soft active:scale-[0.98];
+}
+
+.btn-accent {
+  @apply inline-flex items-center justify-center gap-2 rounded-full bg-sky-400 px-6 py-3 text-sm font-semibold text-navy-900 transition-all hover:bg-sky-300 hover:shadow-soft active:scale-[0.98];
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-navy-900 px-6 py-3 text-sm font-semibold text-navy-900 transition-all hover:bg-navy-900 hover:text-white active:scale-[0.98];
+}
+
+.card {
+  @apply rounded-2xl border border-navy-100 bg-white shadow-sm transition-shadow hover:shadow-soft;
+}
